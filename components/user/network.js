@@ -25,7 +25,17 @@ router.get('/:id',function(req,res){
     });
 })
 
-router.upsert('/:id',function(req,res){
+router.put('/:id',function(req,res){
+  Controller.upsert(req.body)
+    .then ((user) => {
+      response.success(req,res,user,201)
+    })
+    .catch((err) => {
+      response.error  (req,res,err.message,500)
+    });
+})
+
+router.post('/:id',function(req,res){
   Controller.upsert(req.body)
     .then ((user) => {
       response.success(req,res,user,201)

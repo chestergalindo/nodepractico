@@ -1,4 +1,4 @@
-cons nanoid = require('nanoid)
+const nanoid = require('nanoid')
 
 const TABLA = 'user'
 
