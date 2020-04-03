@@ -25,7 +25,7 @@ router.get('/:id',function(req,res){
     });
 })
 
-router.put('/:id',function(req,res){
+router.put('/',function(req,res){
   Controller.upsert(req.body)
     .then ((user) => {
       response.success(req,res,user,201)
@@ -35,7 +35,7 @@ router.put('/:id',function(req,res){
     });
 })
 
-router.post('/:id',function(req,res){
+router.post('/',function(req,res){
   Controller.upsert(req.body)
     .then ((user) => {
       response.success(req,res,user,201)
