@@ -4,8 +4,12 @@ const db = {
   ],
 };
 
+// async function list (table) {
+//   return db[table] || []
+// }
+
 async function list (table) {
-  return db[table] || []
+  return new Promise( (res, rej) => res(db[table] || []));
 }
 
 async function get (table,id) {

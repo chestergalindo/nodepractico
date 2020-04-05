@@ -1,9 +1,9 @@
-// const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
-// function sign(data) {
-//   return jwt.sign(data, 'secreto');
-// }
+function sign(data) {
+  return jwt.sign(data, 'secreto');
+}
 
-// module.exports = {
-//   sign,
-// };
+module.exports = {
+  sign,
+};
